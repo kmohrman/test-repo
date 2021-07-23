@@ -19,6 +19,8 @@ jobs:
         run: |
           python print_text.py
       - name: Run a test bash script with source
+        run: |
           source test.sh
       - name: Run a test bash script
+        run: |
           ./test.sh
