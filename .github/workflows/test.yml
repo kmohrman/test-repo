@@ -18,3 +18,8 @@ jobs:
       - name: Run test script
         run: |
           python print_text.py
+      - name: Run a test bash script
+          source test.sh
+      - name: Run a test bash script with ./
+          #chmod +x ./test.sh
+          ./test.sh
