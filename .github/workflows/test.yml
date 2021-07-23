@@ -1,0 +1,20 @@
+name: CI
+
+on: push
+  
+jobs:
+  # Example of a test job, just prints Hello world
+  test: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world
+        run: echo Hello world
+  # Placeholder job for testing the processor, based on build job from https://github.com/bu-cms/bucoffea/blob/master/.github/workflows/pythonpackage.yml
+  runfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run test script
+        run: |
+          python print_text.py
