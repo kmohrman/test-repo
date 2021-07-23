@@ -21,5 +21,4 @@ jobs:
       - name: Run a test bash script with source
           source test.sh
       - name: Run a test bash script
-          #chmod +x ./test.sh
           ./test.sh
