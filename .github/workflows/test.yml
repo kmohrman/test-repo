@@ -20,6 +20,7 @@ jobs:
           python print_text.py
       - name: Run a test bash script
         run: |
+          chmod +x ./test.sh
           ./test.sh
       - name: Run a test bash script with source
         run: |
