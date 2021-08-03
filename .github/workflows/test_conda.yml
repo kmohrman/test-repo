@@ -23,6 +23,7 @@ jobs:
         run: |
           conda env update --file environment.yml --name base
       - name: conda list
+        run: |
           conda list
       - name: Run a test bash script
         run: |
