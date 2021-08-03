@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-python not_a_file.py
+
+python test.py
 echo $?
 echo "Will this print?"
+echo $?
