@@ -1,0 +1,29 @@
+name: CI
+
+on: push
+  
+jobs:
+  # Example of a test job, just prints Hello world
+  test: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world
+        run: echo Hello world
+  # Placeholder job
+  runfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Add conda to system path
+        run: |
+          # $CONDA is an environment variable pointing to the root of the miniconda directory
+          echo $CONDA/bin >> $GITHUB_PATH
+      - name: Install dependencies
+        run: |
+          conda env update --file environment.yml --name base
+     - name: conda list
+          conda list
+      - name: Run a test bash script
+        run: |
+          source test.sh
