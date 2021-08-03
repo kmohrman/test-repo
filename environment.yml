@@ -3,5 +3,9 @@ channels:
   - defaults
   - conda-forge
 dependencies:
-  - python
+  - python=3.8.3
+  - coffea
+  - ndcctools
+  - conda-pack
   - dill
+  - xrootd
