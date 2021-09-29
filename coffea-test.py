@@ -1,11 +1,10 @@
 import uproot
 from coffea.nanoevents import NanoEventsFactory, BaseSchema
+import awkward as ak
+from coffea import hist, processor
 
 # https://github.com/scikit-hep/uproot4/issues/122
 uproot.open.defaults["xrootd_handler"] = uproot.source.xrootd.MultithreadedXRootDSource
-
-import awkward as ak
-from coffea import hist, processor
 
 # register our candidate behaviors
 from coffea.nanoevents.methods import candidate
