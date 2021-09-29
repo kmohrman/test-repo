@@ -21,3 +21,12 @@ jobs:
       - name: Run a test bash script
         run: |
           source test.sh
+      - name: Pack env
+        run: |
+          conda-pack --name coffea-env --output coffea-env.tar.gz
+      - name: Start worker
+        run: |
+          work_queue_worker -d all -o worker.log localhost 9123 &
+      - name: Run processor
+        run: |
+          python coffea-test.py
